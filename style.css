@@ -151,11 +151,53 @@ header {
     top: 0;
 }
 
-#logo {
-    background-color: red;
-    width: 120px;
-    height: 120px;
-    float: left;
+#logo{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;user-select: none;
+
+}
+
+#logo .ring{
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background: repeating-conic-gradient(
+    #d7b98e 0 calc(360deg/7 - 6deg),
+    transparent 0 calc(360deg/7)
+  );
+
+  -webkit-mask: radial-gradient(circle,
+    transparent calc(50% - 14px),
+    #000 calc(50% - 14px)
+  );
+  mask: radial-gradient(circle,
+    transparent calc(50% - 14px),
+    #000 calc(50% - 14px)
+  );
+
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.18));
+  animation: spin 10s linear infinite;
+}
+
+#logo .digit{
+  position: relative;
+  z-index: 1;
+  color: #0b1f3a;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 1;
+}
+
+@keyframes spin{
+  to{ transform: rotate(360deg); }
 }
 
 body, html {
@@ -493,13 +535,12 @@ section.video iframe {
     display: block;
 }
 
-/* --- ELEMENTY MENU / HAMBURGER --- */
 #nav-toggle {
-    display: none;           /* domyślnie ukryty */
+    display: none;           
 }
 
 #nav-toggle-label {
-    display: none;           /* pokażemy tylko na telefonach */
+    display: none;           
     cursor: pointer;
     font-size: 32px;
     color: var(--text);
@@ -509,7 +550,6 @@ section.video iframe {
     z-index: 1001;
 }
 
-/* delikatne tło pod headerem na wszystkich urządzeniach */
 header {
     width: 100%;
     height: 120px;
@@ -517,7 +557,7 @@ header {
     top: 0;
     background-color: transparent;
 }
-/* ================== TELEFON < 600px ================== */
+
 @media (max-width: 599px) {
 
     #background_div,
@@ -561,8 +601,9 @@ header {
         z-index: 1001;
         font-size: 32px;
         line-height: 1;
-        padding: 8px 10px;
+        margin-top: 10px;
     }
+
 
     menu{
         display: none;
@@ -648,6 +689,14 @@ header {
         padding: 0px 50px;
     }
 
+    #cudo_desc p {
+        font-size: 16px;
+    }
+
+    .lista li {
+        font-size: 16px;
+    }
+
     input[type="text"],
     input[type="number"] {
         width: 80%;
@@ -674,8 +723,6 @@ header {
 }
 
 @media (min-width: 600px) and (max-width: 1199px) {
-
-    /* HEADER + MENU: poziome, wyśrodkowane, inny wygląd */
     header {
         position: fixed;
         top: 0;
@@ -700,7 +747,6 @@ header {
         float: left;
     }
 
-    /* ukryj hamburgera na tabletach */
     #nav-toggle,
     #nav-toggle-label {
         display: none;
@@ -756,7 +802,6 @@ header {
         margin-right: auto;
     }
 
-    /* Tabela jest widoczna, ale węższa */
     table {
         width: 90%;
         font-size: 14px;
@@ -766,7 +811,7 @@ header {
         padding: 10px;
     }
 
-    /* Wideo zwężone */
+
     section.video iframe {
         width: 90%;
         height: 360px;
