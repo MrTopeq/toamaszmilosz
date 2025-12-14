@@ -1,0 +1,775 @@
+:root {
+    --text:#fbf3fcee;
+    --light-blue: #dcedffff;
+    --dark-blue: #94b0daff;
+    --grey: #8f91a2ff;
+    --orange: #efa00bff;
+}
+
+#background_div {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/great-wall-of-china.jpg);
+    background-size: cover;
+    animation: bck_slider 28s ease-in-out infinite;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+}
+
+#mur_bck {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/great-wall-of-china.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+}
+#koloseum_bck {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/koloseum.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+}
+#opera_bck {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/opera.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+}
+
+#eiffla_bck{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/paris.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+}
+#mahal_bck {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/taj-mahal.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+}
+
+#statula_bck {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/statule.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+}
+
+#piramidy_bck{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/pyramids.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+}
+
+#dark_layer {
+    background-color: #22222285;
+    width: 100%;
+    height: 100%;
+    color:var(--text);
+    font-size: 40px;
+}
+
+#dark_layer h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    user-select: none;
+    text-align: center;
+    line-height: 100vh;
+    margin: 0;
+}
+
+#dark_layer {
+    position: absolute;
+}
+
+body {
+    background-color: #111;
+    font-family: "Google Sans Flex", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+menu {
+    list-style-type: none;
+    padding-inline-start: 0;
+    float: left;
+    width: calc(100% - 140px);
+    text-align: right;
+    padding-right: 20px;
+}
+
+footer {
+    width: calc(100% - 60px);
+    padding: 30px;
+    text-align: center;
+    background-color: var(--dark-blue);
+    font-size: 18px;
+    clear: both;
+}
+
+menu li {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0px 10px;
+    transition: transform 0.4s ease-in;
+}
+
+menu a {
+    text-decoration: none;
+    color:var(--text);
+}
+menu li:hover {
+    transform: translateY(-1px) scale(0.95);
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 0;
+}
+
+#logo {
+    background-color: red;
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+.active {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: var(--orange);
+}
+#go_down {
+    background-image: url(img/arrow_down.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#arrow_down a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+#arrow_down {
+    font-size: 24px;
+    position: absolute;
+    top: 55vh;
+    text-align: center;
+    user-select: none;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0px;
+    right: 0px;
+}
+
+h2 {
+    color: var(--light-blue);
+    font-size: 35px;
+}
+
+main {
+    width: calc(100%);
+}
+
+main.cudo p {
+    color: var(--text);
+    font-size: 21px;
+    text-align: justify;
+}
+
+section.list{
+    margin-top: 100px;
+    width: 100%;
+}
+
+.lista {
+    width: calc(50% - 180px);
+    min-height: 500px;
+    background-color: #222;
+    float: left;
+    margin: 50px;
+    border-radius: 30px;
+    padding: 0px 40px;
+}
+
+li {
+    color: var(--text);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.map{
+    width: 100%;
+    height: 800px;
+}
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#cudo_desc {
+    padding: 0px 100px;
+}
+
+.cud_cont {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 40px;
+}
+.cud {
+    width: calc(33.333% - 43px);
+    height: 500px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+.cud h3{
+    font-size: 24px;
+}
+
+#cud7 {
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+    background-color: #df2935;
+}
+
+#cud7 .cud_img {
+    background-image: url(img/pyramids.jpg);
+}
+
+.cud_img {
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-size:cover ;
+    background-position: center;
+}
+
+.cud_desc {
+    width: calc(100% - 20px);
+    height: calc(50% - 20px);
+    padding: 10px;
+    overflow: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: justify;
+}
+
+@keyframes bck_slider {
+    0% {
+        background-image: url(img/great-wall-of-china.jpg);
+    }
+    14% {
+        background-image: url(img/koloseum.jpg);
+    }
+    28% {
+        background-image: url(img/opera.jpg);
+    }
+    42% {
+        background-image: url(img/pyramids.jpg);
+    }
+    56% {
+        background-image: url(img/paris.jpg);
+    }
+    70% {
+        background-image: url(img/statule.jpg);
+    }
+    84% {
+        background-image: url(img/taj-mahal.jpg);
+    }
+    100% {
+        background-image: url(img/great-wall-of-china.jpg);
+    }
+}
+
+#cud1 .cud_img {
+    background-image: url(img/great-wall-of-china.jpg);
+}
+
+#cud1 {
+    background-color: var(--orange);
+}
+
+#cud2 .cud_img {
+    background-image: url(img/koloseum.jpg);
+}
+
+#cud2 {
+    background-color: var(--light-blue);
+}
+
+#cud3 .cud_img {
+    background-image: url(img/opera.jpg);
+}
+
+#cud3 {
+    background-color: #ff0054;
+}
+
+#cud4 {
+    background-color: #06d6a0;
+}
+
+#cud4 .cud_img {
+    background-image: url(img/paris.jpg);
+}
+
+#cud5 .cud_img{
+    background-image: url(img/taj-mahal.jpg);
+}
+#cud5{
+    background-color: #7209b7;
+}
+
+#cud6 {
+    background-color: #55a630;
+}
+
+#cud6 .cud_img {
+    background-image: url(img/statule.jpg);
+}
+
+.link {
+    color: var(--text);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50px;
+    border: 3px solid var(--text);
+    transition: background-color 1s ease;
+}
+
+.link:hover {
+    background-color: #fbf3fc67;
+}
+
+.link_d {
+    color: #1d1a1ccb;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50px;
+    border: 3px solid #1d1a1ccb;
+    transition: background-color 1s ease;
+}
+
+.link_d:hover {
+    background-color: #1d1a1c44;
+}
+
+.center {
+    text-align: center;
+}
+
+table {
+    color: var(--text);
+    border: 3px solid var(--text);
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, th {
+    border: 3px solid var(--text);
+    padding: 20px;
+    text-align: center;
+}
+
+.cud_table {
+    color: #ff0054;
+}
+
+#section2 {
+    background-color: #222;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    margin-top: 50px;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"], input[type="number"] {
+    width: 200px;
+    padding: 20px;
+    border-radius: 90px;
+    text-align: center;
+    background-color: transparent;
+    border: 3px solid var(--text);
+    outline: none;
+    color: var(--text);
+    font-size: 18px;
+    transition: background-color 1s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    background-color: #fbf3fc1c;
+}
+
+input[type="number"] {
+    width: 100px;
+}
+
+label.upper {
+    display: block;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: var(--text);
+}
+
+
+form h3 {
+    color: var(--text);
+    font-size: 24px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-top: 20px;
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 20px;
+    background-color: transparent;
+    color: var(--text);
+    border-radius: 90px;
+    border: 3px solid var(--text);
+    transition: background-color 1s ease;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #8f91a2ff;
+}
+section.video {
+    width: 100%;
+    background-color: #222;
+    padding: 70px 0px;
+}
+section.video iframe {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 600px;
+    display: block;
+}
+
+/* --- ELEMENTY MENU / HAMBURGER --- */
+#nav-toggle {
+    display: none;           /* domyślnie ukryty */
+}
+
+#nav-toggle-label {
+    display: none;           /* pokażemy tylko na telefonach */
+    cursor: pointer;
+    font-size: 32px;
+    color: var(--text);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+}
+
+/* delikatne tło pod headerem na wszystkich urządzeniach */
+header {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+}
+/* ================== TELEFON < 600px ================== */
+@media (max-width: 599px) {
+
+    #background_div,
+    #mur_bck,
+    #koloseum_bck,
+    #opera_bck,
+    #eiffla_bck,
+    #mahal_bck,
+    #statula_bck,
+    #piramidy_bck {
+        background-attachment: scroll;
+    }
+
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 70px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+
+        /* klucz: burger w headerze */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    #logo{
+        float: none;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
+
+    #nav-toggle-label{
+        display: block;
+        position: static;
+        z-index: 1001;
+        font-size: 32px;
+        line-height: 1;
+        padding: 8px 10px;
+    }
+
+    menu{
+        display: none;
+        position: fixed;      
+        top: 70px;           
+        left: 0;
+        right: 0;
+        margin-top: 0;        
+        float: none;
+        width: 100%;
+        text-align: left;
+
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    #nav-toggle:checked + #nav-toggle-label + menu{
+        display: block;
+    }
+
+    menu li {
+        display: block;
+        margin: 10px 20px;
+        font-size: 18px;
+    }
+
+    menu a {
+        display: block;
+        padding: 5px 0;
+    }
+
+    #dark_layer h1 {
+        line-height: normal;
+        padding-top: 60vh;
+        font-size: 26px;
+        margin: 0 20px;
+    }
+
+    #arrow_down {
+        top: 70vh;
+        font-size: 16px;
+    }
+
+    main {
+        margin-top: 100px; 
+    }
+
+    .cud_cont {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .cud {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        display: block;
+    }
+
+    .cud_img {
+        height: 200px;
+    }
+
+    .cud_desc {
+        height: auto;
+    }
+
+    #cud7 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #section2 {
+        display: none;
+    }
+
+    form {
+        padding: 0 10px;
+    }
+
+    #cudo_desc {
+        padding: 0px 50px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 80%;
+        max-width: 260px;
+    }
+
+    section.video iframe {
+        width: 100%;
+        height: 230px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+        width: calc(100% - 30px);
+    }
+    div.lista {
+        display: block;
+        width: calc(100% - 180px);
+    }
+    .lista h2 {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+
+    /* HEADER + MENU: poziome, wyśrodkowane, inny wygląd */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 90px;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 1000;
+    }
+
+    div.lista {
+        display: block;
+        width: calc(100% - 180px);
+    }
+    .lista h2 {
+        font-size: 28px;
+    }
+
+    #logo {
+        width: 70px;
+        height: 70px;
+        margin: 10px 20px;
+        float: left;
+    }
+
+    /* ukryj hamburgera na tabletach */
+    #nav-toggle,
+    #nav-toggle-label {
+        display: none;
+    }
+
+    menu {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-top: -12px;
+    }
+
+    menu li {
+        display: inline-block;
+        font-size: 18px;
+        margin: 0 8px;
+    }
+
+    #dark_layer h1 {
+        line-height: 90px;
+        padding-top: 40vh;
+        font-size: 32px;
+    }
+
+    main {
+        margin-top: 120px; 
+    }
+
+    .cud_cont {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .cud {
+        width: calc(100% - 30px);
+        height: auto;
+        margin: 10px 15px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .cud_img {
+        height: 220px;
+    }
+
+    .cud_desc {
+        height: auto;
+    }
+
+    #cud7 {
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Tabela jest widoczna, ale węższa */
+    table {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    td, th {
+        padding: 10px;
+    }
+
+    /* Wideo zwężone */
+    section.video iframe {
+        width: 90%;
+        height: 360px;
+    }
+}
+
