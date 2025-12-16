@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 cudów świata | Galeria</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Poznaj 7 cudów świata: Piramidy w Gizie, Wielki Mur Chiński, Koloseum, Tadź Mahal, Wieżę Eiffla, Statuę Wolności i Operę w Sydney. Historia, ciekawostki, fakty.">
+    <meta name="keywords" content="7 cudów świata, siedem cudów świata, cuda świata, zabytki świata, atrakcje turystyczne, historia, ciekawostki, Piramidy w Gizie, Wielka Piramida w Gizie, Egipt, Giza, Wielki Mur Chiński, Chiny, Koloseum, Rzym, Włochy, Tadź Mahal, Agra, Indie, Wieża Eiffla, Paryż, Francja, Statua Wolności, Nowy Jork, USA, Opera w Sydney, Sydney, Australia">
+    <meta name="author" content="Tomasz Miłosz">
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const root = document.querySelector(".g7");
+        if (!root) return;
+
+        const mainImg = root.querySelector(".g7-main");
+        const thumbs = Array.from(root.querySelectorAll(".g7-thumb"));
+        const prevBtn = root.querySelector(".g7-prev");
+        const nextBtn = root.querySelector(".g7-next");
+
+        let index = thumbs.findIndex(t => t.classList.contains("is-active"));
+        if (index < 0) index = 0;
+
+        function setIndex(nextIndex) {
+        const n = thumbs.length;
+        index = (nextIndex + n) % n;
+
+        const t = thumbs[index];
+        const full = t.dataset.full;
+        const alt = t.dataset.alt || `Zdjęcie ${index + 1}`;
+
+        mainImg.src = full;
+        mainImg.alt = alt;
+
+        thumbs.forEach(x => x.classList.remove("is-active"));
+        t.classList.add("is-active");
+        }
+
+        thumbs.forEach((t, i) => {
+        t.addEventListener("click", () => setIndex(i));
+        });
+
+        prevBtn.addEventListener("click", () => setIndex(index - 1));
+        nextBtn.addEventListener("click", () => setIndex(index + 1));
+
+        // Klawiatura: działa, gdy fokus jest w obrębie galerii (np. na przyciskach/miniaturach).
+        root.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") { e.preventDefault(); setIndex(index - 1); }
+        if (e.key === "ArrowRight") { e.preventDefault(); setIndex(index + 1); }
+        });
+
+        // Umożliwia fokus na całej sekcji (opcjonalnie)
+        root.tabIndex = 0;
+
+        setIndex(index);
+    });
+    </script>
+</head>
+<body>
+    <div id="background_div">
+        <div id="dark_layer">
+            <h1>Galeria</h1>
+            <header>
+                <div id="logo" aria-label="7 Cudów Świata">
+                    <span class="ring" aria-hidden="true"></span>
+                    <span class="digit">7</span>
+                </div>
+                <input type="checkbox" id="nav-toggle">
+                <label for="nav-toggle" id="nav-toggle-label">&#9776;</label>
+                <menu>
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="piramidy.html">Piramidy</a></li>
+                    <li><a href="mur.html">Wielki Mur Chiński</a></li>
+                    <li><a href="koloseum.html">Koloseum</a></li>
+                    <li><a href="mahal.html">Tadź Mahal</a></li>
+                    <li><a href="eiffla.html">Wieża Eiffla</a></li>
+                    <li><a href="statula.html">Statuła Wolności</a></li>
+                    <li><a href="opera.html">Opera w Sydney</a></li>
+                </menu>
+            </header>
+            <div id="arrow_down">
+                <a href="#main">Zobacz więcej</a>
+                <div id="go_down"></div>
+            </div>
+        </div>
+    </div>
+    <main id="main">
+        <br>
+        <br>
+        <section class="g7" aria-label="Galeria zdjęć">
+        <div class="g7-view">
+            <button class="g7-nav g7-prev" type="button" aria-label="Poprzednie zdjęcie">
+            ‹
+            </button>
+
+            <img
+            class="g7-main"
+            src="img/1.jpg"
+            alt="Zdjęcie 1"
+            width="1200"
+            height="800"
+            decoding="async"
+            />
+
+            <button class="g7-nav g7-next" type="button" aria-label="Następne zdjęcie">
+            ›
+            </button>
+        </div>
+
+        <div class="g7-thumbs" role="list" aria-label="Miniaturki">
+            <button class="g7-thumb is-active" type="button" data-full="img/taj-mahal.jpg" data-alt="Zdjęcie 1" aria-label="Wybierz zdjęcie 1">
+            <img src="img/taj-mahal.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="g7-thumb" type="button" data-full="img/statule.jpg" data-alt="Zdjęcie 2" aria-label="Wybierz zdjęcie 2">
+            <img src="img/statule.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="g7-thumb" type="button" data-full="img/pyramids.jpg" data-alt="Zdjęcie 3" aria-label="Wybierz zdjęcie 3">
+            <img src="img/pyramids.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="g7-thumb" type="button" data-full="img/paris.jpg" data-alt="Zdjęcie 4" aria-label="Wybierz zdjęcie 4">
+            <img src="img/paris.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="g7-thumb" type="button" data-full="img/opera.jpg" data-alt="Zdjęcie 5" aria-label="Wybierz zdjęcie 5">
+            <img src="img/opera.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="g7-thumb" type="button" data-full="img/koloseum.jpg" data-alt="Zdjęcie 6" aria-label="Wybierz zdjęcie 6">
+            <img src="img/koloseum.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button class="g7-thumb" type="button" data-full="img/great-wall-of-china.jpg" data-alt="Zdjęcie 7" aria-label="Wybierz zdjęcie 7">
+            <img src="img/great-wall-of-china.jpg" alt="" loading="lazy" decoding="async" />
+            </button>
+        </div>
+        </section>
+        <div class="center">
+                <a href="#dark_layer" class="link center">Do góry</a>
+        </div>
+        <br>
+        <br>
+    </main>
+    <footer>
+        <p>Stronę Wykonał - <b>Tomasz Miłosz 2tb</b></p>
+    </footer>
+</body>
+</html>
