@@ -818,3 +818,91 @@ header {
     }
 }
 
+.g7 {
+            --thumb-size: 74px;
+            --gap: 10px;
+            --radius: 14px;
+            max-width: 980px;
+            margin: 24px auto;
+            user-select: none;
+        }
+
+        .g7-view {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: #0b0c10;
+            aspect-ratio: 3 / 2;
+        }
+
+        .g7-main {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .g7-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            font-size: 32px;
+            line-height: 1;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            z-index: 2;
+            backdrop-filter: blur(4px);
+        }
+
+        .g7-prev { left: 12px; }
+        .g7-next { right: 12px; }
+
+        .g7-nav:hover { background: rgba(0, 0, 0, 0.72); }
+        .g7-nav:focus-visible { outline: 3px solid #6aa9ff; outline-offset: 2px; }
+
+        .g7-thumbs {
+            margin-top: 12px;
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: var(--gap);
+        }
+
+        .g7-thumb {
+            border: 2px solid transparent;
+            padding: 0;
+            background: transparent;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            height: var(--thumb-size);
+        }
+
+        .g7-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: saturate(0.95);
+        }
+
+        .g7-thumb.is-active {
+            border-color: #6aa9ff;
+        }
+
+        .g7-thumb:focus-visible {
+            outline: 3px solid #6aa9ff;
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 720px) {
+            .g7 { --thumb-size: 58px; }
+            .g7-nav { width: 42px; height: 42px; font-size: 28px; }
+            .g7-thumbs { gap: 8px; }
+        }
